@@ -1,43 +1,47 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LogicaBrillo : MonoBehaviour
 {
-
     public Slider slider;
     public float sliderValue;
     public Image panelBrillo;
-    public float valorBlack;
-    public float valorWhite;
-    // Start is called before the first frame update
+
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("Brillo", 0.5f);
-
-        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, sliderValue / 3);
+        sliderValue = slider.value;
+        ActualizarBrillo();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        valorBlack = 1 - sliderValue - 0.5f;
-        valorWhite = sliderValue - 0.5f;
-        if (sliderValue < 0.5f)
-        {
-            panelBrillo.color = new Color(0, 0, 0, valorBlack);
-        }
-        if (sliderValue > 0.5f)
-        {
-            panelBrillo.color = new Color(255, 255, 255, valorWhite);
-        }
+        sliderValue = slider.value;
+        ActualizarBrillo();
     }
+
     public void ChangeSlider(float valor)
     {
         sliderValue = valor;
         PlayerPrefs.SetFloat("Brillo", sliderValue);
-        panelBrillo.color = new Color(panelBrillo.color.r, panelBrillo.color.g, panelBrillo.color.b, sliderValue / 3);
+        ActualizarBrillo();
     }
 
+    void ActualizarBrillo()
+    {
+        float nuevoAlfa = Mathf.Clamp(Mathf.Abs(sliderValue - 0.5f) * 1.8f, 0.02f, 0.78f);
+        // 🔹 Alfa mínimo: 0.02 (para que nunca sea completamente opaco)
+        // 🔹 Alfa máximo: 0.78 (equivalente a 200 en escala de 255)
+
+        if (sliderValue < 0.5f)
+        {
+            panelBrillo.color = new Color(0, 0, 0, nuevoAlfa); // Llega a 200 (0.78 en Unity)
+        }
+        else
+        {
+            panelBrillo.color = new Color(1, 1, 1, nuevoAlfa); // Ajusta el blanco también
+        }
+    }
 }
