@@ -1,27 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BotonOpciones : MonoBehaviour
 {
-    private OpcionesManager opcionesManager;
-
-    void Start()
+    public void VolverAlMenu()
     {
-        opcionesManager = FindObjectOfType<OpcionesManager>(); // Encuentra OpcionesManager en la escena
-
-        if (opcionesManager == null)
-        {
-            Debug.LogError("No se encontró OpcionesManager en la escena.");
-        }
-
-        GetComponent<Button>().onClick.AddListener(ToggleOpciones);
-    }
-
-    void ToggleOpciones()
-    {
-        if (opcionesManager != null)
-        {
-            opcionesManager.AlternarPanel();
-        }
+        // Llamamos al GameManager para volver al MainMenu
+        OpcionesManager.instancia.VolverAlMenu();
     }
 }

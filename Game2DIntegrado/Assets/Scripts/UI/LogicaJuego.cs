@@ -20,5 +20,6 @@ public class LogicaJuego : MonoBehaviour
     public void CambiarEscena()
     {
         SceneManager.LoadScene(1);
+       
     }
 }

@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     public float speed;
     float regularSpeed;
+    private bool isFacingRight = true;
 
     [Header("JumpParameters")]
     public float jumpForce;
@@ -58,13 +59,22 @@ public class PlayerController : MonoBehaviour
     void movement()
     {
         PlayerRB.velocity = new Vector3(moveInput.x * speed, PlayerRB.velocity.y, 0);
+        if (moveInput.x > 0 && !isFacingRight) Flip();
+        if (moveInput.x < 0 && isFacingRight) Flip();
     }
 
     void groundCheck()
     {
         isGrounded = Physics2D.OverlapCircle(GroundCheck.position, groundcheckRadius, groundLayer);
     }
- 
+    void Flip()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        isFacingRight = !isFacingRight;
+    }
+
     #endregion
     #region InputSystem
     public void OnMove(InputAction.CallbackContext context)
@@ -73,12 +83,12 @@ public class PlayerController : MonoBehaviour
     }
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started)
+        // Bloquear el salto si el juego está pausado
+        if (Time.timeScale == 0) return;
+
+        if (context.started && isGrounded)
         {
-            if(isGrounded)
-            {
-                PlayerRB.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
-            }
+            PlayerRB.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
         }
     }
     public void OnSlide(InputAction.CallbackContext context)

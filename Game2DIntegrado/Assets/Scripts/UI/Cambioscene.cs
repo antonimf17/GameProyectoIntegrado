@@ -1,37 +1,66 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cambioscene : MonoBehaviour
 {
-
     [SerializeField] GameObject MainMenu;
-    [SerializeField] GameObject Settings;
-    // Start is called before the first frame update
+    [SerializeField] GameObject PanelOpciones1;
+   
+
+    // Usar una variable estática para mantener la referencia del PanelOpciones
+    private static GameObject panelOpciones;
+
     void Start()
     {
-        
+        // Si PanelOpciones está marcado como DontDestroyOnLoad, se asegura de que se mantenga entre escenas
+        DontDestroyOnLoad(PanelOpciones1);
+
+        // Asignamos el PanelOpciones a la variable estática para que siempre sea accesible
+        if (panelOpciones == null)
+        {
+            panelOpciones = PanelOpciones1;
+        }
+
+        // Inicialmente, se activa el MainMenu y desactiva el PanelOpciones
+        MainMenu.SetActive(true);
+        PanelOpciones1.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        // Aquí puedes agregar otras lógicas si es necesario
     }
+
+    // Este método se llama cuando quieres mostrar el panel de Opciones (Settings)
     public void MostrarOpciones()
     {
-        // Desactivar el Main Menu
         MainMenu.SetActive(false);
-
-        // Activar el Panel de Opciones
-       Settings.SetActive(true);
+        panelOpciones.SetActive(true);  // Usamos la referencia estática global
     }
+
+    // Este método se llama para volver al MainMenu desde Settings
     public void VolverAlMenu()
     {
-        // Activar el Main Menu
         MainMenu.SetActive(true);
+        panelOpciones.SetActive(false);  // Usamos la referencia estática global
+    }
 
-        // Desactivar el Panel de Opciones
-       Settings.SetActive(false);
+    // Este evento se llama cuando se ha cargado una nueva escena
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // En este caso, ya no necesitamos buscar el PanelOpciones, porque usamos la referencia global
+        // Si PanelOpciones se marca como DontDestroyOnLoad, ya se mantendrá entre escenas
+    }
+
+    // Suscribirse al evento cuando la escena es cargada
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // Desuscribirse al evento cuando el objeto se desactive
+    void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }

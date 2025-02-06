@@ -9,6 +9,8 @@ TagManager:
   - Confiner
   - Opciones
   - opciones
+  - Panelopc
+  - Menu
   layers:
   - Default
   - TransparentFX
