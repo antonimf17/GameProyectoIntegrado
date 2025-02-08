@@ -8,5 +8,6 @@ public class BotonPausa : MonoBehaviour
     {
         // Llamamos al GameManager para desactivar el panel de opciones
         OpcionesManager.instancia.AlternarPanel();
+      
     }
 }

@@ -28,6 +28,8 @@ public class BotonMenuPrincipal : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
         PanelOpciones.SetActive(false);
         PanelMenu.SetActive(true);
+        OpcionesManager.instancia.GameOver.SetActive(false);
+
 
     }
 }

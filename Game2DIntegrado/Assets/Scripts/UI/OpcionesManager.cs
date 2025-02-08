@@ -8,6 +8,9 @@ public class OpcionesManager : MonoBehaviour
     public GameObject panelOpciones;  // Panel de opciones a alternar
     public Button botonMenu;          // Botón para menú
     public GameObject MainMenu;       // Panel principal (Main Menu)
+    public GameObject GameOver;
+    public GameObject UIGame;
+    public GameObject WingPanel;
 
     private bool isPaused = false;  // Bandera para saber si el juego está pausado
 
@@ -59,28 +62,39 @@ public class OpcionesManager : MonoBehaviour
 
     public void AlternarPanel()
     {
+        OpcionesManager.instancia.UIGame.SetActive(false);
         if (panelOpciones == null) return;
 
         bool estaActivo = !panelOpciones.activeSelf;
         panelOpciones.SetActive(estaActivo);
 
+       
+
         // Pausar o reanudar el juego solo cuando el panel cambia de estado
         isPaused = estaActivo;
+
+        if (!estaActivo)
+        {
+            OpcionesManager.instancia.UIGame.SetActive(true);
+        }
 
         // Pausar si el panel está activo, reanudar si no
         Time.timeScale = estaActivo ? 0 : 1;
 
         Debug.Log("Opciones " + (estaActivo ? "activadas (pausa)" : "cerradas (reanudar)"));
+     
     }
 
     public void VolverAlMenu()
     {
         MainMenu.SetActive(true);
         panelOpciones.SetActive(false);
+        
     }
 
     public void CambiarEscenaMenuPrincipal()
     {
         SceneManager.LoadScene("Main Menu");  // Cambiar a la escena "Main Menu"
+        OpcionesManager.instancia.UIGame.SetActive(false);
     }
 }

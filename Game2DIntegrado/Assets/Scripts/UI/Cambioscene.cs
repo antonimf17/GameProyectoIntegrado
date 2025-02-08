@@ -5,6 +5,7 @@ public class Cambioscene : MonoBehaviour
 {
     [SerializeField] GameObject MainMenu;
     [SerializeField] GameObject PanelOpciones1;
+    
    
 
     // Usar una variable estática para mantener la referencia del PanelOpciones
@@ -50,6 +51,8 @@ public class Cambioscene : MonoBehaviour
         MainMenu.SetActive(false);
 
         panelOpciones.SetActive(false);
+        OpcionesManager.instancia.GameOver.SetActive(false);
+        OpcionesManager.instancia.UIGame.SetActive(true);
         Time.timeScale = 1.0f;
     }
     // Este evento se llama cuando se ha cargado una nueva escena

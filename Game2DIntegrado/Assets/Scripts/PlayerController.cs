@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool isSliding = false;
     private bool canSlide = true; // Controla si el jugador puede deslizarse
 
+    [SerializeField] GameObject Menupausa;
+
     #endregion
     #region Start y Update
     void Start()
@@ -74,7 +76,16 @@ public class PlayerController : MonoBehaviour
         transform.localScale = currentScale;
         isFacingRight = !isFacingRight;
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            OpcionesManager.instancia.GameOver.SetActive(true);
+            OpcionesManager.instancia.UIGame.SetActive(false);
+            Menupausa.SetActive(false);
+            Time.timeScale = 0;
+        }
+    }
     #endregion
     #region InputSystem
     public void OnMove(InputAction.CallbackContext context)
