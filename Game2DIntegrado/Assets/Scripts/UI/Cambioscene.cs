@@ -45,6 +45,13 @@ public class Cambioscene : MonoBehaviour
         panelOpciones.SetActive(false);  // Usamos la referencia estática global
     }
 
+  public void jugar()
+    {
+        MainMenu.SetActive(false);
+
+        panelOpciones.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
     // Este evento se llama cuando se ha cargado una nueva escena
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {

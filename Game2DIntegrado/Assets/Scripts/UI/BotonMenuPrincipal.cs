@@ -6,6 +6,7 @@ public class BotonMenuPrincipal : MonoBehaviour
 {
     public Button botonMenu;  // Asegúrate de asignar el botón en el Inspector de Unity.
     public GameObject PanelOpciones;
+    public GameObject PanelMenu;
 
     void Start()
     {
@@ -26,5 +27,7 @@ public class BotonMenuPrincipal : MonoBehaviour
         // Cambiar a la escena principal (asegúrate de que "Main Menu" está bien escrito en tu Build Settings)
         SceneManager.LoadScene("Main Menu");
         PanelOpciones.SetActive(false);
+        PanelMenu.SetActive(true);
+
     }
 }

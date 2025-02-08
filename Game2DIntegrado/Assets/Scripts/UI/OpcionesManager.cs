@@ -30,6 +30,13 @@ public class OpcionesManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;  // Suscribirse al evento de carga de escena
         ActualizarEstadoBoton();
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))  // Solo activar opciones con Escape
+        {
+            AlternarPanel();
+        }
+    }
 
     private void OnDestroy()
     {
