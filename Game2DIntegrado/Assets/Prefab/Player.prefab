@@ -275,9 +275,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   slideSpeed: 8
-  slideDuration: 0.5
   isSliding: 0
-  slideCooldown: 1
+  Menupausa: {fileID: 0}
 --- !u!1 &6173637931504424881
 GameObject:
   m_ObjectHideFlags: 0
