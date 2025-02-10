@@ -12,6 +12,7 @@ TagManager:
   - Panelopc
   - Menu
   - Enemy
+  - Objeto
   layers:
   - Default
   - TransparentFX

@@ -48,4 +48,11 @@ public class EnemyController : MonoBehaviour
         transform.localScale = currentScale;
         isFacingRight = !isFacingRight;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Objeto"))
+        {
+            collision.gameObject.SetActive(false);
+        }
+    }
 }

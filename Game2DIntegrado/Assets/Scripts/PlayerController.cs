@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("JumpParameters")]
     public float jumpForce;
+    public bool isJumping;
     //GroundCheck
     [SerializeField] bool isGrounded;
     [SerializeField] Transform GroundCheck;
@@ -30,8 +31,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float slideSpeed = 8f;
     [SerializeField] private bool isSliding = false;
     private bool canSlide = true; // Controla si el jugador puede deslizarse
-
-    [SerializeField] GameObject Menupausa;
 
     #endregion
     #region Start y Update
@@ -48,8 +47,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         groundCheck();
+        
         if (isSliding) speed = slideSpeed;
         else speed = regularSpeed;
+
+        
     
     }
     #endregion
@@ -57,6 +59,15 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         movement();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") && isJumping)
+        {
+            isJumping = false;
+            Anim.SetBool("IsJumping", false);
+        }
     }
     void movement()
     {
@@ -82,7 +93,7 @@ public class PlayerController : MonoBehaviour
         {
             OpcionesManager.instancia.GameOver.SetActive(true);
             OpcionesManager.instancia.UIGame.SetActive(false);
-            Menupausa.SetActive(false);
+            Manager.Instancia.MenuPausa.SetActive(false);
             Time.timeScale = 0;
         }
     }
@@ -91,6 +102,8 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        if (moveInput.x > 0 || moveInput.x < 0) Anim.SetBool("IsRunning", true);
+        else Anim.SetBool("IsRunning", false);
     }
     public void OnJump(InputAction.CallbackContext context)
     {
@@ -99,14 +112,21 @@ public class PlayerController : MonoBehaviour
 
         if (context.started && isGrounded)
         {
-            PlayerRB.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+            isJumping = true;
+            Anim.SetBool("IsJumping", true);
+            Invoke(nameof(jumpit), 0.3f);
         }
     }
-    public void OnSlide(InputAction.CallbackContext context)
+    public void jumpit()
+    {
+        PlayerRB.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+    }
+        public void OnSlide(InputAction.CallbackContext context)
     {
         if (context.started && isGrounded && canSlide)
         {
             Anim.SetTrigger("Slide");
+          
         }
     }
 
@@ -128,12 +148,7 @@ public class PlayerController : MonoBehaviour
     {
         canSlide = true;
     }
-
-
-    #endregion
-
-
-
-
-
+   
+    
+        #endregion
 }
