@@ -17,6 +17,17 @@ public class PlayerController : MonoBehaviour
     public float speed;
     float regularSpeed;
     private bool isFacingRight = true;
+    [Header("Sprint")]
+    [SerializeField] private float velocidadDeMovimientoBase;
+    [SerializeField] private float velocidadExtra;
+    [SerializeField] private float tiempoSprint;
+        private float tiempoActualSprint;
+    private float tiempoSiguienteSprint;
+    [SerializeField] private float tiempoEntreSprints;
+    private bool puedeCorrer = true;
+    private bool estaCorriendo = false;
+
+
 
     [Header("JumpParameters")]
     public float jumpForce;
@@ -41,6 +52,8 @@ public class PlayerController : MonoBehaviour
         PlayerRB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         regularSpeed = speed;
+        tiempoActualSprint = tiempoSprint;
+
     }
 
     
@@ -50,7 +63,7 @@ public class PlayerController : MonoBehaviour
         
         if (isSliding) speed = slideSpeed;
         else speed = regularSpeed;
-
+    
         
     
     }
@@ -129,6 +142,43 @@ public class PlayerController : MonoBehaviour
           
         }
     }
+    public void Sprints(InputAction.CallbackContext context)
+    {
+      if (context.performed && puedeCorrer)
+        {
+            speed = velocidadExtra;
+            estaCorriendo = true;
+        }
+       else if (context.canceled)
+            {
+            speed = velocidadDeMovimientoBase;
+            estaCorriendo = false;
+        }
+      if(Mathf.Abs(PlayerRB.velocity.x) >= 0.1 && estaCorriendo)
+        {
+            if(tiempoActualSprint > 0)
+            {
+                tiempoActualSprint -= Time.deltaTime;
+            }
+            else
+            {
+                speed = velocidadDeMovimientoBase;
+                estaCorriendo = false;
+                puedeCorrer = false;
+                tiempoSiguienteSprint = Time.time + tiempoEntreSprints;
+
+            }
+        }
+      if (!estaCorriendo && tiempoActualSprint <= tiempoSprint && Time.time >= tiempoSiguienteSprint)
+        {
+            tiempoActualSprint *= Time.deltaTime;
+            if (tiempoActualSprint >= tiempoSprint)
+            {
+                puedeCorrer = true;
+            }
+        }
+    }
+    
 
     #endregion
     #region Animation Events

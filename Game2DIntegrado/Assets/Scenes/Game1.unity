@@ -2706,6 +2706,10 @@ MonoBehaviour:
   Anim: {fileID: 0}
   Input: {fileID: 0}
   speed: 5
+  velocidadDeMovimientoBase: 5
+  velocidadExtra: 8
+  tiempoSprint: 1
+  tiempoEntreSprints: 4
   jumpForce: 8
   isJumping: 0
   isGrounded: 1
@@ -2789,6 +2793,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 112284ec-6ae7-4c63-9583-be88caa7a162
     m_ActionName: Move/Slide[/Keyboard/s,/Keyboard/downArrow]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1585301871}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Sprints
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ed61c134-ab23-42eb-a4b1-6c4ea15c5ab4
+    m_ActionName: Move/Sprint[/Keyboard/shift]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Move
