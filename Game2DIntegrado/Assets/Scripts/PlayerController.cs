@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     float regularSpeed;
     private bool isFacingRight = true;
+
     [Header("Sprint")]
     [SerializeField] private float velocidadDeMovimientoBase;
     [SerializeField] private float velocidadExtra;
@@ -32,6 +33,10 @@ public class PlayerController : MonoBehaviour
     [Header("JumpParameters")]
     public float jumpForce;
     public bool isJumping;
+    [SerializeField] private float jumpCooldown = 0.5f; // ⏳ Cooldown del salto
+    private bool canJump = true; // 🔒 Controla si se puede saltar
+
+
     //GroundCheck
     [SerializeField] bool isGrounded;
     [SerializeField] Transform GroundCheck;
@@ -62,10 +67,33 @@ public class PlayerController : MonoBehaviour
         groundCheck();
         
         if (isSliding) speed = slideSpeed;
-        else speed = regularSpeed;
-    
-        
-    
+        else if (!isSliding && !estaCorriendo) speed = regularSpeed;
+
+        if (Mathf.Abs(PlayerRB.velocity.x) >= 0.1 && estaCorriendo)
+        {
+            if (tiempoActualSprint > 0)
+            {
+                tiempoActualSprint -= Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log("Sprint terminado, cooldown iniciado");
+                speed = velocidadDeMovimientoBase;
+                estaCorriendo = false;
+                puedeCorrer = false;
+                tiempoSiguienteSprint = Time.time + tiempoEntreSprints;
+
+            }
+        }
+        if (!estaCorriendo && tiempoActualSprint <= tiempoSprint && Time.time >= tiempoSiguienteSprint)
+        {
+            tiempoActualSprint += Time.deltaTime;
+            if (tiempoActualSprint >= tiempoSprint)
+            {
+                puedeCorrer = true;
+            }
+        }
+
     }
     #endregion
     #region void
@@ -110,6 +138,11 @@ public class PlayerController : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    private IEnumerator ResetJumpCooldown()
+    {
+        yield return new WaitForSeconds(jumpCooldown);
+        canJump = true; // ✅ Habilita el salto de nuevo
+    }
     #endregion
     #region InputSystem
     public void OnMove(InputAction.CallbackContext context)
@@ -120,14 +153,16 @@ public class PlayerController : MonoBehaviour
     }
     public void OnJump(InputAction.CallbackContext context)
     {
-        // Bloquear el salto si el juego est� pausado
-        if (Time.timeScale == 0) return;
+        // Bloquear el salto si el juego está pausado
+        if (!canJump || !isGrounded || isSliding) return;
 
-        if (context.started && isGrounded)
+        if (context.started)
         {
             isJumping = true;
+            canJump = false; // ❌ Bloquea futuros intentos de salto
             Anim.SetBool("IsJumping", true);
             Invoke(nameof(jumpit), 0.3f);
+            StartCoroutine(ResetJumpCooldown()); // ⏳ Inicia cooldown
         }
     }
     public void jumpit()
@@ -154,29 +189,7 @@ public class PlayerController : MonoBehaviour
             speed = velocidadDeMovimientoBase;
             estaCorriendo = false;
         }
-      if(Mathf.Abs(PlayerRB.velocity.x) >= 0.1 && estaCorriendo)
-        {
-            if(tiempoActualSprint > 0)
-            {
-                tiempoActualSprint -= Time.deltaTime;
-            }
-            else
-            {
-                speed = velocidadDeMovimientoBase;
-                estaCorriendo = false;
-                puedeCorrer = false;
-                tiempoSiguienteSprint = Time.time + tiempoEntreSprints;
-
-            }
-        }
-      if (!estaCorriendo && tiempoActualSprint <= tiempoSprint && Time.time >= tiempoSiguienteSprint)
-        {
-            tiempoActualSprint *= Time.deltaTime;
-            if (tiempoActualSprint >= tiempoSprint)
-            {
-                puedeCorrer = true;
-            }
-        }
+ 
     }
     
 

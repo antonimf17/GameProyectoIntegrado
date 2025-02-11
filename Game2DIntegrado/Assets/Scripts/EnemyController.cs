@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Objeto"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             collision.gameObject.SetActive(false);
         }
