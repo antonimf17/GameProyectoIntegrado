@@ -154,8 +154,10 @@ public class PlayerController : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
-        if (moveInput.x > 0 || moveInput.x < 0) Anim.SetBool("IsRunning", true);
-        else Anim.SetBool("IsRunning", false);
+        if (!isJumping)
+        {
+            Anim.SetBool("IsRunning", moveInput.x != 0);
+        }
     }
     public void OnJump(InputAction.CallbackContext context)
     {
