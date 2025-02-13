@@ -51,3 +51,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackGround
+    uniqueID: 2628776677
+    locked: 0
+  - name: LastPlane
+    uniqueID: 4189031509
+    locked: 0
+  - name: MediumPlane
+    uniqueID: 1662821833
+    locked: 0
+  - name: InteractivePlane
+    uniqueID: 3609025501
+    locked: 0
+  - name: FirstPlane
+    uniqueID: 772357275
+    locked: 0
