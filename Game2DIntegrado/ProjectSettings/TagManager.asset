@@ -13,6 +13,7 @@ TagManager:
   - Menu
   - Enemy
   - Objeto
+  - PickUp
   layers:
   - Default
   - TransparentFX

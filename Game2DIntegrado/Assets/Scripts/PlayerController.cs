@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         private float tiempoActualSprint;
     private float tiempoSiguienteSprint;
     [SerializeField] private float tiempoEntreSprints;
-    private bool puedeCorrer = true;
+    private bool puedeCorrer = false;
     private bool estaCorriendo = false;
 
 
@@ -69,32 +69,17 @@ public class PlayerController : MonoBehaviour
         if (isSliding) speed = slideSpeed;
         else if (!isSliding && !estaCorriendo) speed = regularSpeed;
 
-        if (Mathf.Abs(PlayerRB.velocity.x) >= 0.1 && estaCorriendo)
+        if (estaCorriendo)
         {
-            if (tiempoActualSprint > 0)
+            tiempoActualSprint -= Time.deltaTime;
+            if (tiempoActualSprint <= 0)
             {
-                tiempoActualSprint -= Time.deltaTime;
-            }
-            else
-            {
-                Debug.Log("Sprint terminado, cooldown iniciado");
-                speed = velocidadDeMovimientoBase;
-                estaCorriendo = false;
-                puedeCorrer = false;
-                tiempoSiguienteSprint = Time.time + tiempoEntreSprints;
-
-            }
-        }
-        if (!estaCorriendo && tiempoActualSprint <= tiempoSprint && Time.time >= tiempoSiguienteSprint)
-        {
-            tiempoActualSprint += Time.deltaTime;
-            if (tiempoActualSprint >= tiempoSprint)
-            {
-                puedeCorrer = true;
+                TerminarSprint();
             }
         }
 
     }
+
     #endregion
     #region void
     private void FixedUpdate()
@@ -130,6 +115,8 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
             OpcionesManager.instancia.GameOver.SetActive(true);
@@ -137,11 +124,30 @@ public class PlayerController : MonoBehaviour
             Manager.Instancia.MenuPausa.SetActive(false);
             Time.timeScale = 0;
         }
+
+        if (collision.CompareTag("PickUp"))
+        {
+            ActivarSprint();
+        }
     }
     private IEnumerator ResetJumpCooldown()
     {
         yield return new WaitForSeconds(jumpCooldown);
         canJump = true; // ✅ Habilita el salto de nuevo
+    }
+    void ActivarSprint()
+    {
+        puedeCorrer = true;
+        tiempoActualSprint = tiempoSprint;
+        Debug.Log("Sprint activado");
+    }
+
+    void TerminarSprint()
+    {
+        Debug.Log("Sprint terminado");
+        puedeCorrer = false;
+        estaCorriendo = false;
+        speed = velocidadDeMovimientoBase;
     }
     #endregion
     #region InputSystem
