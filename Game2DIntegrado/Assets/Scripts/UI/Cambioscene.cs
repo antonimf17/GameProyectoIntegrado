@@ -3,14 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class Cambioscene : MonoBehaviour
 {
+    #region Referencias
+    [Header("Referencias")]
     [SerializeField] GameObject MainMenu;
-    [SerializeField] GameObject PanelOpciones1;
-    
-   
-
-    // Usar una variable estática para mantener la referencia del PanelOpciones
-    private static GameObject panelOpciones;
-
+    [SerializeField] GameObject PanelOpciones1;  
+    [SerializeField] static GameObject panelOpciones;
+    #endregion
+    #region Start&Update
     void Start()
     {
         // Si PanelOpciones está marcado como DontDestroyOnLoad, se asegura de que se mantenga entre escenas
@@ -31,7 +30,8 @@ public class Cambioscene : MonoBehaviour
     {
         // Aquí puedes agregar otras lógicas si es necesario
     }
-
+    #endregion
+    #region void
     // Este método se llama cuando quieres mostrar el panel de Opciones (Settings)
     public void MostrarOpciones()
     {
@@ -73,4 +73,5 @@ public class Cambioscene : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
+    #endregion
 }

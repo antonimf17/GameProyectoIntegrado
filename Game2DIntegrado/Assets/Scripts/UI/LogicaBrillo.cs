@@ -5,10 +5,13 @@ using UnityEngine.UI;
 
 public class LogicaBrillo : MonoBehaviour
 {
-    public Slider slider;
-    public float sliderValue;
-    public Image panelBrillo;
-
+    #region Referencias
+    [Header("Atributos")]
+    [SerializeField] Slider slider;
+    [SerializeField] float sliderValue;
+    [SerializeField] Image panelBrillo;
+    #endregion
+    #region Start&Update
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("Brillo", 0.5f);
@@ -21,7 +24,8 @@ public class LogicaBrillo : MonoBehaviour
         sliderValue = slider.value;
         ActualizarBrillo();
     }
-
+    #endregion
+    #region Voids
     public void ChangeSlider(float valor)
     {
         sliderValue = valor;
@@ -44,4 +48,5 @@ public class LogicaBrillo : MonoBehaviour
             panelBrillo.color = new Color(1, 1, 1, nuevoAlfa); // Ajusta el blanco también
         }
     }
+    #endregion
 }

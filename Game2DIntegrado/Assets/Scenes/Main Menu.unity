@@ -632,7 +632,6 @@ GameObject:
   m_Component:
   - component: {fileID: 141740305}
   - component: {fileID: 141740307}
-  - component: {fileID: 141740306}
   m_Layer: 0
   m_Name: ObjetosEntreEscenas
   m_TagString: Opciones
@@ -658,19 +657,6 @@ Transform:
   - {fileID: 290383464}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &141740306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 141740302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7722a12de7fbdbd4cbef4c57ff29f3f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pantallaOpciones: {fileID: 1455247458}
 --- !u!114 &141740307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1278,6 +1264,7 @@ MonoBehaviour:
   GameOver: {fileID: 614691560}
   UIGame: {fileID: 1229147488}
   WingPanel: {fileID: 0}
+  isPaused: 0
 --- !u!1 &321801680
 GameObject:
   m_ObjectHideFlags: 0

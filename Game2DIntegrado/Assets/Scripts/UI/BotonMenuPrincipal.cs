@@ -4,10 +4,13 @@ using UnityEngine.UI;
 
 public class BotonMenuPrincipal : MonoBehaviour
 {
-    public Button botonMenu;  // Asegúrate de asignar el botón en el Inspector de Unity.
-    public GameObject PanelOpciones;
-    public GameObject PanelMenu;
-
+    #region Referencias
+    [Header("Referencias a paneles")]
+   [SerializeField] Button botonMenu;  // Asegúrate de asignar el botón en el Inspector de Unity.
+   [SerializeField] GameObject PanelOpciones;
+   [SerializeField] GameObject PanelMenu;
+    #endregion
+    #region Start
     void Start()
     {
         // Asegurarnos de que el botón está correctamente asignado en el Inspector
@@ -20,8 +23,8 @@ public class BotonMenuPrincipal : MonoBehaviour
             Debug.LogError("El botón no está asignado en el Inspector.");
         }
     }
-
-    // Método para cambiar de escena cuando se presiona el botón
+    #endregion
+    #region cambiodeescena
     void SceneChanger()
     {
         // Cambiar a la escena principal (asegúrate de que "Main Menu" está bien escrito en tu Build Settings)
@@ -32,4 +35,5 @@ public class BotonMenuPrincipal : MonoBehaviour
 
 
     }
+    #endregion
 }

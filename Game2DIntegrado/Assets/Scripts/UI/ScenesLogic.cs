@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ScenesLogic : MonoBehaviour
 {
+    #region Voids
     private void Awake()
     {
         // Verificar si ya existe un objeto persistente de esta clase
@@ -25,6 +26,7 @@ public class ScenesLogic : MonoBehaviour
     {
         // Aquí podrías agregar lógica para resetear el estado si es necesario
     }
+    #endregion
 }
 
 

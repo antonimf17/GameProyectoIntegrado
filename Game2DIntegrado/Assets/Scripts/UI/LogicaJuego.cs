@@ -5,21 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LogicaJuego : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    #region CambioEscena
     public void CambiarEscena()
     {
         SceneManager.LoadScene(1);
        
     }
+    #endregion
 }

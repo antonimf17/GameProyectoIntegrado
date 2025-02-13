@@ -5,19 +5,21 @@ using UnityEngine.UI;
 
 public class LogicaVolumen : MonoBehaviour
 {
-
-    public Slider slider;
-    public float sliderValue;
-    public Image imagenMute;
-
-
-    // Start is called before the first frame update
+    #region Referencias volumen
+    [Header("ReferenciasVolumen")]
+    [SerializeField] Slider slider;
+    [SerializeField] float sliderValue;
+    [SerializeField] Image imagenMute;
+    #endregion
+    #region Start
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("volumenAudio", 0.5f);
         AudioListener.volume = slider.value;
         RevisarSiEstoyMute();
     }
+    #endregion
+    #region void
     public void ChangeSlider(float valor)
     {
         sliderValue = valor;
@@ -38,6 +40,7 @@ public class LogicaVolumen : MonoBehaviour
             imagenMute.enabled = false;
         }
     }
+    #endregion
 }
 
-  
+

@@ -5,21 +5,26 @@ using TMPro;
 
 public class LogicaCalidad : MonoBehaviour
 {
-    public TMP_Dropdown dropdown;
-    public int quality;
-    // Start is called before the first frame update
+    #region Referencias
+    [Header("Referencias calidad")]
+    [SerializeField] TMP_Dropdown dropdown;
+    [SerializeField] int quality;
+    #endregion
+    #region start
     void Start()
     {
         quality = PlayerPrefs.GetInt("numeroDeCalidad", 3);
         dropdown.value = quality;
         AdjustQuality();
     }
-
+    #endregion
+    #region void
     public void AdjustQuality()
     {
         QualitySettings.SetQualityLevel(dropdown.value);
         PlayerPrefs.SetInt("numeroDeCalidad", dropdown.value);
         quality = dropdown.value;
     }
+    #endregion
 }
 

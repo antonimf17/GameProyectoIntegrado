@@ -7,12 +7,13 @@ using TMPro;
 
 public class LogicaFullScreen : MonoBehaviour
 {
-    public Toggle toggle;
-    public TMP_Dropdown resolucionesDropDown;
+    #region Referencias
+    [Header("Referencias fullscreen")]
+    [SerializeField] Toggle toggle;
+    [SerializeField] TMP_Dropdown resolucionesDropDown;
     Resolution[] resoluciones;
-
-
-    // Start is called before the first frame update
+    #endregion
+    #region start&Update
     void Start()
     {
         if (Screen.fullScreen)
@@ -33,6 +34,8 @@ public class LogicaFullScreen : MonoBehaviour
     {
 
     }
+    #endregion
+    #region void
     public void ActivarPantallaCompleta(bool pantallaCompleta)
     {
         Screen.fullScreen = pantallaCompleta;
@@ -78,5 +81,6 @@ public class LogicaFullScreen : MonoBehaviour
         Resolution resolution = resoluciones[indiceResolucion];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+    #endregion
 
 }

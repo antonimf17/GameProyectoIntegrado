@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class OpcionesManager : MonoBehaviour
 {
+    #region Paneles
+    [Header("Referencia paneles")]
     public static OpcionesManager instancia;
     public GameObject panelOpciones;  // Panel de opciones a alternar
     public Button botonMenu;          // Botón para menú
@@ -12,8 +14,9 @@ public class OpcionesManager : MonoBehaviour
     public GameObject UIGame;
     public GameObject WingPanel;
 
-    private bool isPaused = false;  // Bandera para saber si el juego está pausado
-
+    [SerializeField] bool isPaused = false;  // Bandera para saber si el juego está pausado
+    #endregion
+    #region void
     void Awake()
     {
         // Aseguramos que solo haya una instancia de OpcionesManager
@@ -97,4 +100,5 @@ public class OpcionesManager : MonoBehaviour
         SceneManager.LoadScene("Main Menu");  // Cambiar a la escena "Main Menu"
         OpcionesManager.instancia.UIGame.SetActive(false);
     }
+    #endregion
 }
