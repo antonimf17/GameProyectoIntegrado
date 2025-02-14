@@ -53,6 +53,8 @@ public class EnemyController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             collision.gameObject.SetActive(false);
+        
         }
+     
     }
 }

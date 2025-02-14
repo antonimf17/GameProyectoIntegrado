@@ -6,6 +6,7 @@ public class Manager : MonoBehaviour
 {
     public static Manager Instancia;
     public GameObject MenuPausa;
+    public GameObject pausa;
     void Awake()
     {
         // Aseguramos que solo haya una instancia de OpcionesManager

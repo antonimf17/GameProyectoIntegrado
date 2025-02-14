@@ -32,6 +32,7 @@ public class Countdown : MonoBehaviour
 
        yield return new WaitForSecondsRealtime(1f);
         countdownDisplay.gameObject.SetActive(false);
+        Manager.Instancia.pausa.SetActive(true);
 
        
 

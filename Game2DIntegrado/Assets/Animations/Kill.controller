@@ -6,19 +6,13 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Caballo-Definitivo 1
+  m_Name: Kill
   serializedVersion: 5
-  m_AnimatorParameters:
-  - m_Name: Kill
-    m_Type: 4
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+  m_AnimatorParameters: []
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
-    m_StateMachine: {fileID: 8908602316216018734}
+    m_StateMachine: {fileID: 1980605727551868770}
     m_Mask: {fileID: 0}
     m_Motions: []
     m_Behaviours: []
@@ -28,14 +22,14 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &852557186720830747
+--- !u!1102 &89853049482311953
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HorseRun2
+  m_Name: HorseKill
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -48,13 +42,13 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5ba9e581f785150439c0bc6c0bbe9884, type: 2}
+  m_Motion: {fileID: 7400000, guid: 28b3f6f5d90c1034483e81d14414a2ac, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!1107 &8908602316216018734
+--- !u!1107 &1980605727551868770
 AnimatorStateMachine:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -64,8 +58,8 @@ AnimatorStateMachine:
   m_Name: Base Layer
   m_ChildStates:
   - serializedVersion: 1
-    m_State: {fileID: 852557186720830747}
-    m_Position: {x: 310, y: 100, z: 0}
+    m_State: {fileID: 89853049482311953}
+    m_Position: {x: 320, y: 90, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -75,4 +69,4 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: 852557186720830747}
+  m_DefaultState: {fileID: 89853049482311953}
