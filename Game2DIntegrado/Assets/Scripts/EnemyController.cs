@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector2 direction = (player.position - transform.position).normalized;
 
@@ -54,6 +54,10 @@ public class EnemyController : MonoBehaviour
         {
             collision.gameObject.SetActive(false);
         
+        }
+        if (collision.gameObject.CompareTag("Obstacle")) 
+        {
+            collision.gameObject.SetActive(false);
         }
      
     }

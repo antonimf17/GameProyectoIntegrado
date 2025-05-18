@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 3029738}
   m_Layer: 3
   m_Name: Piedra (33)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 26543810}
   m_Layer: 3
   m_Name: Piedra (28)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 42548003}
   m_Layer: 3
   m_Name: Caja (6)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1480,7 +1480,7 @@ GameObject:
   - component: {fileID: 58300684}
   m_Layer: 3
   m_Name: Caja (1)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2299,7 +2299,7 @@ GameObject:
   - component: {fileID: 113083516}
   m_Layer: 0
   m_Name: Gordo (4)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2671,7 +2671,7 @@ GameObject:
   - component: {fileID: 154943164}
   m_Layer: 3
   m_Name: Caja (2)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2943,7 +2943,7 @@ GameObject:
   - component: {fileID: 158407426}
   m_Layer: 3
   m_Name: Caja (16)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3154,9 +3154,10 @@ GameObject:
   m_Component:
   - component: {fileID: 170775590}
   - component: {fileID: 170775591}
+  - component: {fileID: 170775592}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3228,6 +3229,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &170775592
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170775589}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &178600594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,7 +3371,7 @@ GameObject:
   - component: {fileID: 181216732}
   m_Layer: 3
   m_Name: Caja (30)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3796,7 +3842,7 @@ GameObject:
   - component: {fileID: 222880901}
   m_Layer: 3
   m_Name: Caja (47)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5150,7 +5196,7 @@ GameObject:
   - component: {fileID: 273073589}
   m_Layer: 0
   m_Name: Gordo (6)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5270,7 +5316,7 @@ GameObject:
   - component: {fileID: 280468319}
   m_Layer: 3
   m_Name: Caja (42)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5736,7 +5782,7 @@ GameObject:
   - component: {fileID: 289265696}
   m_Layer: 3
   m_Name: Caja (22)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6015,7 +6061,7 @@ GameObject:
   - component: {fileID: 313773252}
   m_Layer: 3
   m_Name: Caja (28)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6313,7 +6359,7 @@ GameObject:
   - component: {fileID: 351393926}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6608,9 +6654,10 @@ GameObject:
   m_Component:
   - component: {fileID: 362841509}
   - component: {fileID: 362841510}
+  - component: {fileID: 362841511}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6682,6 +6729,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &362841511
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362841508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &363113833
 GameObject:
   m_ObjectHideFlags: 0
@@ -6895,7 +6987,7 @@ GameObject:
   - component: {fileID: 383497013}
   m_Layer: 0
   m_Name: Piedra (5)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7109,7 +7201,7 @@ GameObject:
   - component: {fileID: 386791323}
   m_Layer: 3
   m_Name: Caja (34)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7407,7 +7499,7 @@ GameObject:
   - component: {fileID: 392383209}
   m_Layer: 3
   m_Name: Piedra (26)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7537,7 +7629,7 @@ GameObject:
   - component: {fileID: 399090426}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7664,9 +7756,10 @@ GameObject:
   m_Component:
   - component: {fileID: 400465921}
   - component: {fileID: 400465922}
+  - component: {fileID: 400465923}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7738,6 +7831,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &400465923
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400465920}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &418600437
 GameObject:
   m_ObjectHideFlags: 0
@@ -7751,7 +7889,7 @@ GameObject:
   - component: {fileID: 418600439}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8473,7 +8611,7 @@ GameObject:
   - component: {fileID: 454105752}
   m_Layer: 3
   m_Name: Caja (13)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8771,7 +8909,7 @@ GameObject:
   - component: {fileID: 482529593}
   m_Layer: 0
   m_Name: Piedra (12)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8901,7 +9039,7 @@ GameObject:
   - component: {fileID: 485027582}
   m_Layer: 0
   m_Name: Piedra (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9112,9 +9250,10 @@ GameObject:
   m_Component:
   - component: {fileID: 488882409}
   - component: {fileID: 488882410}
+  - component: {fileID: 488882411}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9186,6 +9325,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &488882411
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488882408}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &489757210
 GameObject:
   m_ObjectHideFlags: 0
@@ -10627,7 +10811,7 @@ GameObject:
   - component: {fileID: 594527283}
   m_Layer: 3
   m_Name: Caja (49)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10757,7 +10941,7 @@ GameObject:
   - component: {fileID: 600281415}
   m_Layer: 3
   m_Name: Caja (29)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11055,7 +11239,7 @@ GameObject:
   - component: {fileID: 619177323}
   m_Layer: 3
   m_Name: Caja (27)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11185,7 +11369,7 @@ GameObject:
   - component: {fileID: 624539824}
   m_Layer: 3
   m_Name: Caja (18)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11315,7 +11499,7 @@ GameObject:
   - component: {fileID: 630298886}
   m_Layer: 3
   m_Name: Caja (24)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11445,7 +11629,7 @@ GameObject:
   - component: {fileID: 631348285}
   m_Layer: 3
   m_Name: Caja (9)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11908,9 +12092,10 @@ GameObject:
   m_Component:
   - component: {fileID: 646727274}
   - component: {fileID: 646727275}
+  - component: {fileID: 646727276}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11982,6 +12167,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &646727276
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646727273}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &650624185
 GameObject:
   m_ObjectHideFlags: 0
@@ -12664,7 +12894,7 @@ GameObject:
   - component: {fileID: 692618549}
   m_Layer: 3
   m_Name: Caja (25)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13485,7 +13715,7 @@ GameObject:
   - component: {fileID: 729286393}
   m_Layer: 3
   m_Name: Caja (3)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13699,7 +13929,7 @@ GameObject:
   - component: {fileID: 736115236}
   m_Layer: 3
   m_Name: Caja (8)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13911,7 +14141,7 @@ GameObject:
   - component: {fileID: 744541106}
   m_Layer: 0
   m_Name: Gordo (5)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15037,7 +15267,7 @@ GameObject:
   - component: {fileID: 815198332}
   m_Layer: 0
   m_Name: Gordo (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15560,7 +15790,7 @@ GameObject:
   - component: {fileID: 863848977}
   m_Layer: 3
   m_Name: Caja (36)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16023,9 +16253,10 @@ GameObject:
   m_Component:
   - component: {fileID: 897147779}
   - component: {fileID: 897147780}
+  - component: {fileID: 897147781}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16097,6 +16328,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &897147781
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897147778}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &900677486
 GameObject:
   m_ObjectHideFlags: 0
@@ -16309,7 +16585,7 @@ GameObject:
   - component: {fileID: 908672007}
   m_Layer: 0
   m_Name: Piedra
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16607,7 +16883,7 @@ GameObject:
   - component: {fileID: 916160507}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17239,7 +17515,7 @@ GameObject:
   - component: {fileID: 934591935}
   m_Layer: 0
   m_Name: Gordo (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17359,7 +17635,7 @@ GameObject:
   - component: {fileID: 937734876}
   m_Layer: 3
   m_Name: Caja (14)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17657,7 +17933,7 @@ GameObject:
   - component: {fileID: 943415668}
   m_Layer: 3
   m_Name: Caja (11)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17787,7 +18063,7 @@ GameObject:
   - component: {fileID: 945592648}
   m_Layer: 3
   m_Name: Caja (37)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18156,9 +18432,10 @@ GameObject:
   m_Component:
   - component: {fileID: 969217771}
   - component: {fileID: 969217772}
+  - component: {fileID: 969217773}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18230,6 +18507,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &969217773
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969217770}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &970722417
 GameObject:
   m_ObjectHideFlags: 0
@@ -18408,7 +18730,7 @@ GameObject:
   - component: {fileID: 971344763}
   m_Layer: 3
   m_Name: Piedra (25)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18538,7 +18860,7 @@ GameObject:
   - component: {fileID: 979943449}
   m_Layer: 3
   m_Name: Caja (45)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18917,9 +19239,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1004347518}
   - component: {fileID: 1004347519}
+  - component: {fileID: 1004347520}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18991,6 +19314,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1004347520
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004347517}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &1011568512
 GameObject:
   m_ObjectHideFlags: 0
@@ -19534,7 +19902,7 @@ GameObject:
   - component: {fileID: 1029083303}
   m_Layer: 0
   m_Name: Gordo (8)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19654,7 +20022,7 @@ GameObject:
   - component: {fileID: 1037932556}
   m_Layer: 0
   m_Name: Piedra (3)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19971,7 +20339,7 @@ GameObject:
   - component: {fileID: 1044835444}
   m_Layer: 3
   m_Name: Caja (23)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20185,7 +20553,7 @@ GameObject:
   - component: {fileID: 1064117978}
   m_Layer: 3
   m_Name: Caja (46)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20396,9 +20764,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1074459669}
   - component: {fileID: 1074459670}
+  - component: {fileID: 1074459671}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20470,6 +20839,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1074459671
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074459668}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &1081239243 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8653719598885068355, guid: e69ff932a85f1fc4194c61f061f45078, type: 3}
@@ -20627,7 +21041,7 @@ GameObject:
   - component: {fileID: 1089681783}
   m_Layer: 0
   m_Name: Gordo
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21376,7 +21790,7 @@ GameObject:
   - component: {fileID: 1124871977}
   m_Layer: 3
   m_Name: Piedra (32)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21590,7 +22004,7 @@ GameObject:
   - component: {fileID: 1128337985}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21804,7 +22218,7 @@ GameObject:
   - component: {fileID: 1136657472}
   m_Layer: 3
   m_Name: Piedra (31)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22438,7 +22852,7 @@ GameObject:
   - component: {fileID: 1176937147}
   m_Layer: 3
   m_Name: Piedra (34)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22568,7 +22982,7 @@ GameObject:
   - component: {fileID: 1178222246}
   m_Layer: 3
   m_Name: Caja (43)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22950,7 +23364,7 @@ GameObject:
   - component: {fileID: 1200466790}
   m_Layer: 3
   m_Name: Caja (10)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23161,9 +23575,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1205931226}
   - component: {fileID: 1205931227}
+  - component: {fileID: 1205931228}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23235,6 +23650,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1205931228
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205931225}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &1220989907
 GameObject:
   m_ObjectHideFlags: 0
@@ -23248,7 +23708,7 @@ GameObject:
   - component: {fileID: 1220989909}
   m_Layer: 3
   m_Name: Caja (38)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23630,7 +24090,7 @@ GameObject:
   - component: {fileID: 1242550513}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23928,7 +24388,7 @@ GameObject:
   - component: {fileID: 1258614977}
   m_Layer: 3
   m_Name: Caja (7)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24058,7 +24518,7 @@ GameObject:
   - component: {fileID: 1263000217}
   m_Layer: 3
   m_Name: Caja (33)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24356,7 +24816,7 @@ GameObject:
   - component: {fileID: 1269213993}
   m_Layer: 3
   m_Name: Caja (5)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24847,9 +25307,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1285229976}
   - component: {fileID: 1285229977}
+  - component: {fileID: 1285229978}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24921,6 +25382,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1285229978
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285229975}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &1286505543
 GameObject:
   m_ObjectHideFlags: 0
@@ -25222,9 +25728,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1352669064}
   - component: {fileID: 1352669065}
+  - component: {fileID: 1352669066}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25296,6 +25803,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1352669066
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352669063}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &1364598051
 GameObject:
   m_ObjectHideFlags: 0
@@ -25642,9 +26194,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1372969872}
   - component: {fileID: 1372969873}
+  - component: {fileID: 1372969874}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25716,6 +26269,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1372969874
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372969871}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &1376512270
 GameObject:
   m_ObjectHideFlags: 0
@@ -25861,7 +26459,7 @@ GameObject:
   - component: {fileID: 1377179066}
   m_Layer: 3
   m_Name: Caja
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26159,7 +26757,7 @@ GameObject:
   - component: {fileID: 1386172247}
   m_Layer: 3
   m_Name: Caja (48)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26373,7 +26971,7 @@ GameObject:
   - component: {fileID: 1389029717}
   m_Layer: 3
   m_Name: Caja (31)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27259,7 +27857,7 @@ GameObject:
   - component: {fileID: 1438734654}
   m_Layer: 3
   m_Name: Caja (20)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27473,7 +28071,7 @@ GameObject:
   - component: {fileID: 1453357370}
   m_Layer: 3
   m_Name: Caja (4)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27603,7 +28201,7 @@ GameObject:
   - component: {fileID: 1466012795}
   m_Layer: 0
   m_Name: Piedra (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27730,9 +28328,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1470253174}
   - component: {fileID: 1470253175}
+  - component: {fileID: 1470253176}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27804,6 +28403,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1470253176
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470253173}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &1474209210
 GameObject:
   m_ObjectHideFlags: 0
@@ -28057,7 +28701,7 @@ GameObject:
   - component: {fileID: 1477423796}
   m_Layer: 0
   m_Name: Gordo (7)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28177,7 +28821,7 @@ GameObject:
   - component: {fileID: 1500041591}
   m_Layer: 3
   m_Name: Caja (44)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28979,7 +29623,7 @@ GameObject:
   - component: {fileID: 1550654092}
   m_Layer: 3
   m_Name: Caja (19)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29109,7 +29753,7 @@ GameObject:
   - component: {fileID: 1554935637}
   m_Layer: 3
   m_Name: Caja (26)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29488,9 +30132,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1579501206}
   - component: {fileID: 1579501207}
+  - component: {fileID: 1579501208}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29562,6 +30207,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1579501208
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579501205}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &1582487110
 GameObject:
   m_ObjectHideFlags: 0
@@ -29721,7 +30411,7 @@ GameObject:
   - component: {fileID: 1583712995}
   m_Layer: 0
   m_Name: Piedra (7)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30028,7 +30718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2185769502722319180, guid: ddde0f0223c15104cb7b02d8ddcd7b75, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.740895
+      value: 0.7408951
       objectReference: {fileID: 0}
     - target: {fileID: -2185769502722319180, guid: ddde0f0223c15104cb7b02d8ddcd7b75, type: 3}
       propertyPath: m_LocalRotation.x
@@ -30036,7 +30726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2185769502722319180, guid: ddde0f0223c15104cb7b02d8ddcd7b75, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6716209
+      value: 0.67162085
       objectReference: {fileID: 0}
     - target: {fileID: -2183987801284144878, guid: ddde0f0223c15104cb7b02d8ddcd7b75, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30176,11 +30866,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8336288059388717671, guid: ddde0f0223c15104cb7b02d8ddcd7b75, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.73367065
+      value: 0.7336708
       objectReference: {fileID: 0}
     - target: {fileID: 8336288059388717671, guid: ddde0f0223c15104cb7b02d8ddcd7b75, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.6795052
+      value: -0.67950517
       objectReference: {fileID: 0}
     - target: {fileID: 8716554378135963415, guid: ddde0f0223c15104cb7b02d8ddcd7b75, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30895,7 +31585,7 @@ GameObject:
   - component: {fileID: 1604288353}
   m_Layer: 0
   m_Name: Piedra (11)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31022,9 +31712,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1607606059}
   - component: {fileID: 1607606060}
+  - component: {fileID: 1607606061}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31096,6 +31787,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1607606061
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607606058}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1 &1609234860
 GameObject:
   m_ObjectHideFlags: 0
@@ -31106,9 +31842,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1609234861}
   - component: {fileID: 1609234862}
+  - component: {fileID: 1609234863}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31180,6 +31917,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1609234863
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609234860}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &1609844653
 GameObject:
   m_ObjectHideFlags: 0
@@ -31632,7 +32414,7 @@ GameObject:
   - component: {fileID: 1641741045}
   m_Layer: 3
   m_Name: Caja (12)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32098,7 +32880,7 @@ GameObject:
   - component: {fileID: 1656959639}
   m_Layer: 3
   m_Name: Caja (15)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32482,9 +33264,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1668096659}
   - component: {fileID: 1668096660}
+  - component: {fileID: 1668096661}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32556,6 +33339,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1668096661
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668096658}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &1673033532
 GameObject:
   m_ObjectHideFlags: 0
@@ -32653,7 +33481,7 @@ GameObject:
   - component: {fileID: 1678233983}
   m_Layer: 3
   m_Name: Caja (39)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32783,7 +33611,7 @@ GameObject:
   - component: {fileID: 1683362737}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33616,7 +34444,7 @@ GameObject:
   - component: {fileID: 1764489510}
   m_Layer: 3
   m_Name: Caja (35)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34570,7 +35398,7 @@ GameObject:
   - component: {fileID: 1822656806}
   m_Layer: 3
   m_Name: Caja (41)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35015,7 +35843,7 @@ GameObject:
   - component: {fileID: 1840803534}
   m_Layer: 0
   m_Name: Gordo
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35461,7 +36289,7 @@ GameObject:
   - component: {fileID: 1880982882}
   m_Layer: 3
   m_Name: Caja (32)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35675,7 +36503,7 @@ GameObject:
   - component: {fileID: 1909986819}
   m_Layer: 3
   m_Name: Piedra (30)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35805,7 +36633,7 @@ GameObject:
   - component: {fileID: 1918189915}
   m_Layer: 3
   m_Name: Piedra (29)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35980,7 +36808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7909391867644945677, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96446186
+      value: 0.9644621
       objectReference: {fileID: 0}
     - target: {fileID: -7909391867644945677, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.x
@@ -35992,7 +36820,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7909391867644945677, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.26422238
+      value: 0.26422134
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalScale.x
@@ -36064,11 +36892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3779866132499082425, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9987231
+      value: 0.99872303
       objectReference: {fileID: 0}
     - target: {fileID: -3779866132499082425, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.050519533
+      value: -0.05052115
       objectReference: {fileID: 0}
     - target: {fileID: -2854217181800464757, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36080,11 +36908,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2267243350482040766, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.99644965
+      value: 0.9964499
       objectReference: {fileID: 0}
     - target: {fileID: -2267243350482040766, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.08419135
+      value: -0.08418866
       objectReference: {fileID: 0}
     - target: {fileID: -1877995355886800117, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36092,7 +36920,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1877995355886800117, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.074148856
+      value: -0.07414885
       objectReference: {fileID: 0}
     - target: {fileID: -1663871946680084600, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36100,7 +36928,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1663871946680084600, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.006931358
+      value: 0.006930358
       objectReference: {fileID: 0}
     - target: {fileID: -1641282363861354367, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36112,7 +36940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 642361749437480448, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.97629005
+      value: 0.97629035
       objectReference: {fileID: 0}
     - target: {fileID: 642361749437480448, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.x
@@ -36124,7 +36952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 642361749437480448, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.21646644
+      value: 0.21646556
       objectReference: {fileID: 0}
     - target: {fileID: 1524240752295786474, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36172,7 +37000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4440809641466811536, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.12642229
+      value: 0.12642226
       objectReference: {fileID: 0}
     - target: {fileID: 4835596483702321470, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36240,11 +37068,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7682523638290747458, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9977471
+      value: 0.9977473
       objectReference: {fileID: 0}
     - target: {fileID: 7682523638290747458, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06708725
+      value: -0.067085326
       objectReference: {fileID: 0}
     - target: {fileID: 8568323070865430855, guid: bf85ce740ff70c74884689742f15e3ec, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36426,7 +37254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyRB: {fileID: 0}
   Enemyanim: {fileID: 0}
-  speed: 35
+  speed: 6
   movement: {x: 0, y: 0}
   player: {fileID: 1585301869}
 --- !u!50 &1921227876
@@ -36514,7 +37342,7 @@ GameObject:
   - component: {fileID: 1927141462}
   m_Layer: 3
   m_Name: Caja (17)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37064,7 +37892,7 @@ GameObject:
   - component: {fileID: 1944002238}
   m_Layer: 3
   m_Name: Caja (40)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37256,7 +38084,7 @@ GameObject:
   - component: {fileID: 1949752404}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37806,7 +38634,7 @@ GameObject:
   - component: {fileID: 2004513618}
   m_Layer: 3
   m_Name: Piedra (27)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38359,7 +39187,7 @@ GameObject:
   - component: {fileID: 2035003162}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38750,7 +39578,7 @@ GameObject:
   - component: {fileID: 2065045364}
   m_Layer: 0
   m_Name: Gordo (2)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39301,7 +40129,7 @@ GameObject:
   - component: {fileID: 2089352740}
   m_Layer: 0
   m_Name: Final
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39431,7 +40259,7 @@ GameObject:
   - component: {fileID: 2092017177}
   m_Layer: 3
   m_Name: Caja (21)
-  m_TagString: Ground
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39642,9 +40470,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2095926317}
   - component: {fileID: 2095926318}
+  - component: {fileID: 2095926319}
   m_Layer: 0
   m_Name: Izquierda
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39716,6 +40545,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2095926319
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095926316}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.91, y: 2.56}
+    newSize: {x: 0.91, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.91, y: 2.56}
+  m_EdgeRadius: 0
 --- !u!1 &2109389362
 GameObject:
   m_ObjectHideFlags: 0
@@ -40211,9 +41085,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2137560918}
   - component: {fileID: 2137560919}
+  - component: {fileID: 2137560920}
   m_Layer: 0
   m_Name: Derecha
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40285,6 +41160,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &2137560920
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137560917}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8, y: 2.77}
+    newSize: {x: 3.8, y: 2.77}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8, y: 2.77}
+  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

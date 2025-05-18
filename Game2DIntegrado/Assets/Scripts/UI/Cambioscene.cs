@@ -44,6 +44,7 @@ public class Cambioscene : MonoBehaviour
     {
         MainMenu.SetActive(true);
         panelOpciones.SetActive(false);  // Usamos la referencia estática global
+        OpcionesManager.instancia.UIGame.SetActive(false);
     }
 
   public void jugar()
@@ -54,6 +55,9 @@ public class Cambioscene : MonoBehaviour
         OpcionesManager.instancia.GameOver.SetActive(false);
         OpcionesManager.instancia.UIGame.SetActive(true);
         Time.timeScale = 1.0f;
+        OpcionesManager.instancia.WingPanel.SetActive(false);
+        OpcionesManager.instancia.UIGame.SetActive(true);
+
     }
     // Este evento se llama cuando se ha cargado una nueva escena
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)

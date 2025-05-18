@@ -321,7 +321,7 @@
                 {
                     "name": "",
                     "id": "f123eb1d-a0f8-4a51-b0b2-f074adba9198",
-                    "path": "<DualShockGamepad>/rightTrigger",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

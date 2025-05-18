@@ -32,7 +32,8 @@ public class BotonMenuPrincipal : MonoBehaviour
         PanelOpciones.SetActive(false);
         PanelMenu.SetActive(true);
         OpcionesManager.instancia.GameOver.SetActive(false);
-
+        OpcionesManager.instancia.WingPanel.SetActive(false);
+        OpcionesManager.instancia.UIGame.SetActive(false);
 
     }
     #endregion

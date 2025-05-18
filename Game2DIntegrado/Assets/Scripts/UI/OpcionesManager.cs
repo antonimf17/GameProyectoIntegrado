@@ -13,6 +13,8 @@ public class OpcionesManager : MonoBehaviour
     public GameObject GameOver;
     public GameObject UIGame;
     public GameObject WingPanel;
+    public GameObject PanelHistoria;
+    public GameObject PanelComoJugar;
 
     [SerializeField] bool isPaused = false;  // Bandera para saber si el juego está pausado
     #endregion
@@ -92,13 +94,31 @@ public class OpcionesManager : MonoBehaviour
     {
         MainMenu.SetActive(true);
         panelOpciones.SetActive(false);
-        
-    }
+        PanelHistoria.SetActive(false);
+     PanelComoJugar.SetActive(false);
 
+    }
+    
+    public void Historia()
+    {
+        PanelHistoria.SetActive(true);
+        panelOpciones.SetActive(false);
+
+    }
+    public void ComoJugar()
+    {
+        PanelComoJugar.SetActive(true);
+        PanelHistoria.SetActive(false);
+    }
     public void CambiarEscenaMenuPrincipal()
     {
         SceneManager.LoadScene("Main Menu");  // Cambiar a la escena "Main Menu"
         OpcionesManager.instancia.UIGame.SetActive(false);
     }
+    public void inicio()
+    {
+        PanelComoJugar.SetActive(false);
+        MainMenu.SetActive(true);
+    }    
     #endregion
 }
